@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1"
+        tools:context="id.sch.smktelkom_mlg.xirpl4014tugas01.telkomschoolsorganization.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="58dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ts" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:text="Pendaftaran Organisasi \nSMK Telkom Malang"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:weightSum="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewNama"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="Nama"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/editTextNama"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:hint="Nama Lengkap"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="Email"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:hint="ini@email.com"
+                android:inputType="textEmailAddress|text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewKelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelas"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <Spinner
+                android:id="@+id/spinnerKelas"
+                android:layout_width="231dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="58dp"
+                android:entries="@array/kelas" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewKL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="Jenis Kelamin"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginLeft="40dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Laki - Laki" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Perempuan" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewOrganisasi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.24"
+                android:text="Organisasi"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxOSIS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="0.24"
+                android:checked="false"
+                android:text="OSIS" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMPK"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.24"
+                android:checked="false"
+                android:text="MPK" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPustel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.24"
+                android:checked="false"
+                android:text="Pustel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewJOSIS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OSIS"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDesOSIS"
+                android:layout_width="246dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="Bertindak sebagai eksekutif di Organisasi, mengurusi kegiatan-kegiatan siswa di SMK Telkom Malang"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewJMPK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MPK"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDesMPK"
+                android:layout_width="246dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="Para wakil kelas yang menyuarakan aspirasi kelasnya di OSIS. Melakukan pengawasan jalannya OSIS. Meminta pertanggungjawaban dari pengurus OSIS. Bertindak sebagai legislatif di Organisasi"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewJPustel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pustel"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDesPustel"
+                android:layout_width="246dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:text="Organisasi yang mengurusi dan mengelola perpustakaan di SMKT Telkom Malang"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonDaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAFTAR" />
+    </LinearLayout>
+</ScrollView>
