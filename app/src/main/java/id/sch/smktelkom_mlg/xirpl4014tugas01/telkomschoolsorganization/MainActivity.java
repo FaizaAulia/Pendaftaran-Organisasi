@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvNama, tvEmail, tvHasil;
+    TextView tvNama, tvEmail, tvHasil, tvHasil1, tvOSIS, tvMPK, tvPustel, tvDetail;
     EditText etNama, etEmail;
     Spinner spinnerKelas;
     RadioGroup rgJK;
@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
         tvNama = (TextView) findViewById(R.id.textViewNama);
         tvEmail = (TextView) findViewById(R.id.textViewEmail);
+        tvDetail = (TextView) findViewById(R.id.textViewDetail);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
+        tvHasil1 = (TextView) findViewById(R.id.textViewHasil1);
         etNama = (EditText) findViewById(R.id.editTextNama);
         etEmail = (EditText) findViewById(R.id.editTextEmail);
         spinnerKelas = (Spinner) findViewById(R.id.spinnerKelas);
@@ -44,6 +46,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 doClicik();
+                String nama = etNama.getText().toString();
+                String email = etEmail.getText().toString();
+                String kelas = spinnerKelas.getSelectedItem().toString();
+                String jenis = null;
+                if (rbL.isChecked()) {
+                    jenis = rbL.getText().toString();
+                } else if (rbP.isChecked()) {
+                    jenis = rbP.getText().toString();
+                }
+
+                tvDetail.setText("Detail Pendaftaran\n" + "Nama : " + nama + "\nEmail : " + email + "\nKelas : " + kelas + "\nJenis Kelamin : "
+                        + jenis + "\n");
+                String hasil = "Pilihan Organisasi : ";
+                int startlen = hasil.length();
+                if (cbOSIS.isChecked()) hasil += cbOSIS.getText() + "\n";
+                if (cbMPK.isChecked()) hasil += cbMPK.getText() + "\n";
+                if (cbPustel.isChecked()) hasil += cbPustel.getText() + "\n";
+                if (hasil.length() == startlen) hasil += "Belum Memilih";
+                tvHasil1.setText(hasil);
             }
         });
     }
@@ -52,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         if (isValid()) {
             String nama = etNama.getText().toString();
             String email = etEmail.getText().toString();
-
         }
 
     }
@@ -66,12 +86,14 @@ public class MainActivity extends AppCompatActivity {
 
         if (nama.isEmpty()) {
             etNama.setError("Nama belum diisi!");
+            valid = false;
         } else {
             etNama.setError(null);
         }
 
         if (email.isEmpty()) {
             etEmail.setError("Email belum diisi!");
+            valid = false;
         } else {
             etEmail.setError(null);
         }
